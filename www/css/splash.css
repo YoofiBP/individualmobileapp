@@ -1,0 +1,39 @@
+[data-role=page] {
+  height: 100% !important;
+  position: relative !important;
+}
+
+[data-role=footer] {
+  bottom: 0;
+  position: absolute !important;
+  top: auto !important;
+  width: 100%;
+}
+
+[role=main] {
+  height: 90%;
+}
+
+.content {
+  height: 100%;
+}
+
+.splash {
+  background-image: url('../img/dazzle.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.loginform {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+}
+
+.ui-content {
+  padding: 0px;
+}
+
+form legend {
+  text-align: left;
+}

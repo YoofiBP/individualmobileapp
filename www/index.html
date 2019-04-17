@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/splash.css">
+  <title>Splash Screen</title>
+</head>
+
+<body>
+
+  <!-- Start of first page: #splash -->
+  <div data-role="page" id="splash">
+
+    <div role="main" class="ui-content">
+      <div class="content splash"></div>
+      <p><a href="#login" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Log in and Sign Up Page</a></p>
+    </div><!-- /content -->
+  </div><!-- /page one -->
+
+  <!-- Start of second page: #login -->
+  <div data-role="page" id="login" data-theme="a">
+
+    <div data-role="header">
+      <h1>Login to Calm Mind</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <input type="text" name="username" value="" placeholder="Username">
+        <input type="password" name="password" value="" placeholder="Password" /> <!-- /content -->
+        <input type="submit" name="submit" value="Log In">
+        <a href="#register" data-direction="reverse"><small>Sign Up for an Account!</small></a>
+      </div>
+
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
+  <!-- Start of third page: #regoster -->
+  <div data-role="page" id="register">
+
+    <div data-role="header" data-theme="b">
+      <h1>Register for Account</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <form class="" action="index.html" method="post">
+          <input type="text" name="first_name" value="" placeholder="First Name">
+          <input type="text" name="last_name" value="" placeholder="Last Name">
+          <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Gender:</legend>
+                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="male">
+                    <label for="radio-choice-h-2a">Male</label>
+                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="female">
+                    <label for="radio-choice-h-2b">Female</label>
+                </fieldset>
+          <input type="email" name="email" value="" placeholder="Email">
+          <input type="text" name="user_name" value="" placeholder="Username">
+          <input type="password" name="password" value="" placeholder="Password" />
+          <input type="password" name="confirm_password" value="" placeholder="Confirm Password" />
+          <input type="submit" name="submit" value="Log In">
+        </form>
+        <a href="#login" data-direction="reverse"><small>Have an Account? Sign In!</small></a>
+      </div>
+      <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page popup -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlEYGuyWL-nZG8k7AwG9tcZ7SNnFDcokk",
+      authDomain: "calmmind-c225f.firebaseapp.com",
+      databaseURL: "https://calmmind-c225f.firebaseio.com",
+      projectId: "calmmind-c225f",
+      storageBucket: "calmmind-c225f.appspot.com",
+      messagingSenderId: "690720280396"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+
+</html>
