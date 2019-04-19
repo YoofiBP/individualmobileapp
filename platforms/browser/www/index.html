@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
   <link rel="stylesheet" href="css/splash.css">
   <title>Splash Screen</title>
 </head>
@@ -12,13 +12,6 @@
 <body>
 
   <!-- Start of first page: #splash -->
-  <div data-role="page" id="splash">
-
-    <div role="main" class="ui-content">
-      <div class="content splash"></div>
-      <p><a href="#login" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Log in and Sign Up Page</a></p>
-    </div><!-- /content -->
-  </div><!-- /page one -->
 
   <!-- Start of second page: #login -->
   <div data-role="page" id="login" data-theme="a">
@@ -34,6 +27,8 @@
         <input type="submit" name="submit" value="Log In">
         <a href="#register" data-direction="reverse"><small>Sign Up for an Account!</small></a>
       </div>
+      <iframe width="100%" height="250" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      <iframe width="100%" height="250" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
     </div>
 
@@ -42,7 +37,7 @@
     </div><!-- /footer -->
   </div><!-- /page two -->
 
-  <!-- Start of third page: #regoster -->
+  <!-- Start of third page: #register -->
   <div data-role="page" id="register">
 
     <div data-role="header" data-theme="b">
@@ -76,6 +71,103 @@
       <h4>Page Footer</h4>
     </div><!-- /footer -->
   </div><!-- /page popup -->
+
+  <div data-role="page" id="audios" data-theme="a">
+
+    <div data-role="header">
+      <h1>Audios</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <iframe width="100%" height="200" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <iframe width="100%" height="200" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <a href="#register" data-direction="reverse"><small>Sign Up for an Account!</small></a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
+  <div data-role="page" id="videos" data-theme="a">
+
+    <div data-role="header">
+      <h1>Video Meditation Lessons</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PQsH7CkBHU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="#register" data-direction="reverse"><small>Sign Up for an Account!</small></a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
+  <div data-role="page" id="journal" data-theme="a">
+
+    <div data-role="header">
+      <h1>Journal Entry</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <a href="#new_entry"><button data-role="button" type="button" name="button">New Post</button></a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
+  <div data-role="page" id="new_entry" data-theme="a">
+
+    <div data-role="header">
+      <h1>Add Journal Entry</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <textarea name="journal_post" rows="30" cols="80"></textarea>
+        <button>Add Post</button><button>Open Camera</button>
+        <button type="button" name="button">Upload Image from Gallery</button>
+        <button type="button" name="button">Speech-To-Text</button>
+        <a href="#journal"><button data-role="button" type="button" name="button">Back</button></a>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
+  <div data-role="page" id="settings" data-theme="a">
+
+    <div data-role="header">
+      <h1>Change Settings</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <div class="content loginform ui-field-contain">
+        <img src="" />
+        <button>FAQs</button>
+        <button>Share with Contact</button>
+        <button type="button" name="button">Change Account Settings</button>
+        <button type="button" name="button">About Calm Mind</button>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h4>Page Footer</h4>
+    </div><!-- /footer -->
+  </div><!-- /page two -->
+
   <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
 
   <!-- Add Firebase products that you want to use -->
@@ -93,10 +185,19 @@
       messagingSenderId: "690720280396"
     };
     firebase.initializeApp(config);
+
+    window.plugins.speechRecognition.isRecognitionAvailable(function(available) {
+      if (available) {
+        // You can use the speechRecognition
+        console.log("Can be used");
+      }
+    }, function(err) {
+      console.error(err);
+    });
   </script>
   <script type="text/javascript" src="cordova.js"></script>
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </body>
 
 </html>
