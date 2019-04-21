@@ -1,7 +1,14 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-  console.log(navigator.camera);
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+    console.log(user.email);
+    console.log(user.providerData);
+  }else{
+    console.log("Signed Out second");
+  }
+});
 }
 
 function showAlert(){
@@ -10,16 +17,6 @@ function showAlert(){
     function(){},
     "Title");
 }
-
-// function setOptions(srcType){
-//   var options = {
-//     quality: 50,
-//     destinationType: Camera.DestinationType.FILE_URI,
-//     sourceType: srcType,
-//     encodingType: Camera.EncodingType.JPEG,
-//   };
-//   return options;
-// }
 
 function takePicture(){navigator.camera.getPicture(onSuccess,onFail,{
   quality: 50,

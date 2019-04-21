@@ -22,10 +22,12 @@
 
     <div role="main" class="ui-content">
       <div class="content loginform ui-field-contain">
-        <input type="text" name="username" value="" placeholder="Username">
-        <input type="password" name="password" value="" placeholder="Password" /> <!-- /content -->
-        <input type="submit" name="submit" value="Log In">
+        <input type="text" id="email" name="email" value="" placeholder="Email">
+        <input type="password" id="password" name="password" value="" placeholder="Password" /> <!-- /content -->
+        <input type="submit" name="submit" value="Log In" id="loginButton">
+        <input type="button" id="googleButton" value="Login with Google" />
         <a href="#register" data-direction="reverse"><small>Sign Up for an Account!</small></a>
+        <p id="loginErrors"></p>
       </div>
       <iframe width="100%" height="250" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       <iframe width="100%" height="250" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/608117772%3Fsecret_token%3Ds-MWTJc&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
@@ -165,6 +167,7 @@
         <button>FAQs</button>
         <button id="share_with_contact" type="button">Share with Contact</button>
         <button type="button" name="button">Change Account Settings</button>
+        <button id="signOut" type="button">Sign Out</button>
       </div>
     </div>
 
@@ -216,6 +219,7 @@
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/userhandling.js"></script>
 </body>
 
 </html>
