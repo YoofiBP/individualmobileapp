@@ -270,6 +270,14 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+        "id": "cordova-plugin-firebase.FirebasePlugin",
+        "pluginId": "cordova-plugin-firebase",
+        "clobbers": [
+            "FirebasePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -280,7 +288,8 @@ module.exports.metadata =
     "cordova-plugin-media": "5.0.2",
     "cordova-plugin-speechrecognition": "1.1.2",
     "cordova-plugin-dialogs": "2.0.1",
-    "cordova-plugin-camera": "4.0.3"
+    "cordova-plugin-camera": "4.0.3",
+    "cordova-plugin-firebase": "2.0.5"
 }
 // BOTTOM OF METADATA
 });
