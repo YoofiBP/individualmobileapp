@@ -90,20 +90,20 @@ function signUp(){
   signUpError+=validateEmail();
   var password = $('#sign_password').val();
   var confirmpassword = $('#confirm_password').val();
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
-    if(!error){
-      var user = firebase.auth(currentUser);
-      user.updateProfile({
-        displayName: displayname
-      }).then(function(){
-        console.log("Success");
-      })
-    }
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(pageTwo).catch(function(error){
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorCode);
     console.log(errorMessage);
   })
+}
+
+function setUsername(){
+  var user = firebase.auth().currentUser;
+  var name = $('#username').val();
+  user.updateProfile({
+    displayName : name;
+  }).then(pageThree).catch(function(error){console.log(error.code, error.nessage)})
 }
 
 $("#signUpButton").click(signUp);

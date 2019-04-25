@@ -61,8 +61,16 @@ function pageTwo(){
   $('#sign_email').hide();
   $('#sign_password').hide();
   $('#confirm_password').hide();
+  $('#signUpButton').hide();
   $('#username').show();
   $('#usernameButton').show();
+}
+
+function pageThree(){
+  $('#username').hide();
+  $('#usernameButton').hide();
+  $('#profilePic').hide();
+  $('#profileButton').hide();
 }
 
 $("#cameraButton").click(takePicture);
