@@ -88,8 +88,31 @@ function signUp(){
   var email = $('#sign_email').val();
   signUpError+=validateEmail();
   var password = $('#sign_password').val();
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+  })
 }
 
-$("#loginButton").click(validateSignUpPassword);
+function getUserData(){
+  var user = firebase.auth().currentUser;
+  var name, email, photoUrl,uid,emailVerified;
+
+  if (user != null) {
+  name = user.displayName;
+  email = user.email;
+  photoUrl = user.photoURL;
+  emailVerified = user.emailVerified;
+  uid = user.uid;
+}
+
+console.log(name, email, photoURL, emailVerified, uid);
+}
+
+$('showInfo').click(getUserData);
+$("#signUpButton").click(signUp);
+$("#loginButton").click(validateLogin);
 $("#googleButton").click(signIn);
 $("#signOut").click(signOut);
