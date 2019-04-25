@@ -69,8 +69,8 @@ function pageTwo(){
 function pageThree(){
   $('#username').hide();
   $('#usernameButton').hide();
-  $('#profilePic').hide();
-  $('#profileButton').hide();
+  $('#profilePic').show();
+  $('#profileButton').show();
 }
 
 $("#cameraButton").click(takePicture);

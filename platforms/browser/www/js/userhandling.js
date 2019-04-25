@@ -98,15 +98,16 @@ function signUp(){
   })
 }
 
-function setUsername(){
-  var user = firebase.auth().currentUser;
-  var name = $('#username').val();
-  user.updateProfile({
-    displayName : name;
-  }).then(pageThree).catch(function(error){console.log(error.code, error.nessage)})
-}
+ function setUsername(){
+   var user = firebase.auth().currentUser;
+   var name = $('#username').val();
+   user.updateProfile({
+     displayName : name
+   }).then(pageThree).catch(function(error){});
+ }
 
 $("#signUpButton").click(signUp);
+$('#usernameButton').click(setUsername);
 $("#loginButton").click(validateLogin);
 $("#googleButton").click(signIn);
 $("#signOut").click(signOut);
