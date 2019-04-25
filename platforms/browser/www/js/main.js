@@ -13,8 +13,9 @@ function onDeviceReady(){
 
 $('#username').hide();
 $('#usernameButton').hide();
-$('#profilePic').hide();
-$('#profileButton').hide();
+$('#profileComplete').hide();
+$('#cameraButton').hide();
+$('#galleryButton').hide();
 }
 
 function showAlert(){
@@ -34,7 +35,7 @@ function takePicture(){navigator.camera.getPicture(onSuccess,onFail,{
 function pickPicture(){navigator.camera.getPicture(onSuccess,onFail,{
   quality: 50,
   destinationType: Camera.DestinationType.FILE_URI,
-  sourceType: Camera.PictureSourceType.CAMERA,
+  sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM,
   encodingType: Camera.EncodingType.JPEG
 });}
 
@@ -69,8 +70,9 @@ function pageTwo(){
 function pageThree(){
   $('#username').hide();
   $('#usernameButton').hide();
-  $('#profilePic').show();
-  $('#profileButton').show();
+  $('#cameraButton').show();
+  $('#galleryButton').show();
+  $('#profileComplete').show();
 }
 
 $("#cameraButton").click(takePicture);
