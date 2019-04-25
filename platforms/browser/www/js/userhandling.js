@@ -85,10 +85,20 @@ function validateLogin(){
 
 function signUp(){
   var signUpError = "";
+  var displayname = $('#first_name').val() + " " + $('#last_name').val();
   var email = $('#sign_email').val();
   signUpError+=validateEmail();
   var password = $('#sign_password').val();
+  var confirmpassword = $('#confirm_password').val();
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error){
+    if(!error){
+      var user = firebase.auth(currentUser);
+      user.updateProfile({
+        displayName: displayname
+      }).then(function(){
+        console.log("Success");
+      })
+    }
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorCode);
@@ -96,23 +106,8 @@ function signUp(){
   })
 }
 
-function getUserData(){
-  var user = firebase.auth().currentUser;
-  var name, email, photoUrl,uid,emailVerified;
-
-  if (user != null) {
-  name = user.displayName;
-  email = user.email;
-  photoUrl = user.photoURL;
-  emailVerified = user.emailVerified;
-  uid = user.uid;
-}
-
-console.log(name, email, photoURL, emailVerified, uid);
-}
-
-$('showInfo').click(getUserData);
 $("#signUpButton").click(signUp);
 $("#loginButton").click(validateLogin);
 $("#googleButton").click(signIn);
 $("#signOut").click(signOut);
+$('#signUpButton').click(signUp);

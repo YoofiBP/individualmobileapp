@@ -3,8 +3,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady(){
   firebase.auth().onAuthStateChanged(function(user){
     if(user){
-    console.log(user.email);
-    console.log(user.providerData);
+    console.log(
+      "name "+ user.displayName +"\n" + "email: " + user.email +"\n" + "photoURL: " + user.photoURL +"\n" + "emailVerified: " + user.emailVerified +"\n" + "ID: " + user.uid +"\n" + "Provider Data: " + user.providerData
+    );
   }else{
     console.log("Signed Out second");
   }
