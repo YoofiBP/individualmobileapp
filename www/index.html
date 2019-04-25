@@ -49,20 +49,15 @@
     <div role="main" class="ui-content">
       <div class="content loginform ui-field-contain">
         <form class="" action="index.html" method="post">
-          <input type="text" id="first_name" name="first_name" value="" placeholder="First Name">
-          <input type="text" id="last_name" name="last_name" value="" placeholder="Last Name">
-          <fieldset data-role="controlgroup" data-type="horizontal">
-                    <legend>Gender:</legend>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="male">
-                    <label for="radio-choice-h-2a">Male</label>
-                    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="female">
-                    <label for="radio-choice-h-2b">Female</label>
-                </fieldset>
           <input type="email" id="sign_email" name="sign_email" value="" placeholder="Email">
-          <input type="text" name="user_name" value="" placeholder="Username">
           <input type="password" id="sign_password" name="sign_password" value="" placeholder="Password" />
           <input type="password" id="confirm_password" name="confirm_password" value="" placeholder="Confirm Password" />
-          <input type="submit" name="submit" id="signUpButton" value="Sign Up">
+         <!-- <input type="submit" name="submit" id="signUpButton" value="Sign Up"> -->
+         <button type="button" name="submit" id="signUpButton">Sign Up</button>
+          <input type="text" id="username" name="username" value="" placeholder="what's your name">
+          <button type="button" name="submit" id="usernameButton">Next</button>
+          <input type="text" id="profilePic" name="ProfilePic" value="">
+          <button type="button" name="submit" id="profileButton">Done!</button>
         </form>
         <a href="#login" data-direction="reverse"><small>Have an Account? Sign In!</small></a>
       </div>

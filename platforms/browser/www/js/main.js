@@ -10,6 +10,11 @@ function onDeviceReady(){
     console.log("Signed Out second");
   }
 });
+
+$('#username').hide();
+$('#usernameButton').hide();
+$('#profilePic').hide();
+$('#profileButton').hide();
 }
 
 function showAlert(){
@@ -50,6 +55,14 @@ function checkAvailable(){
   }, function(){
     console.log("Failed");
   });
+}
+
+function pageTwo(){
+  $('#sign_email').hide();
+  $('#sign_password').hide();
+  $('#confirm_password').hide();
+  $('#username').show();
+  $('#usernameButton').show();
 }
 
 $("#cameraButton").click(takePicture);

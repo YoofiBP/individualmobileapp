@@ -110,4 +110,3 @@ $("#signUpButton").click(signUp);
 $("#loginButton").click(validateLogin);
 $("#googleButton").click(signIn);
 $("#signOut").click(signOut);
-$('#signUpButton').click(signUp);
