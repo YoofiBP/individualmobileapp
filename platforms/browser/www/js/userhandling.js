@@ -2,7 +2,6 @@
     window.location.href = "#login";
   }
 
-
 function signIn(){
 var provider = new firebase.auth.GoogleAuthProvider();
 
