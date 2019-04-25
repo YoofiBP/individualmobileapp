@@ -37,6 +37,23 @@ function validateEmail(){
     return emailError;
 }
 
+var constraints = {
+  password: {
+    presence: true,
+    length: {
+      minimum: 6,
+      message: "must be at least 6 characters"
+    }
+  }
+}
+
+function validateSignUpPassword(){
+  var user_password = $("#password").val();
+  var result = validate({password: user_password}, constraints)
+  console.log(result);
+  alert(result.password);
+}
+
 
 function validatePassword(){
   var password = $("#password").val();
@@ -66,6 +83,13 @@ function validateLogin(){
   }
 }
 
-$("#loginButton").click(validateLogin);
+function signUp(){
+  var signUpError = "";
+  var email = $('#sign_email').val();
+  signUpError+=validateEmail();
+  var password = $('#sign_password').val();
+}
+
+$("#loginButton").click(validateSignUpPassword);
 $("#googleButton").click(signIn);
 $("#signOut").click(signOut);
