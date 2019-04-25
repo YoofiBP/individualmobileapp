@@ -6,6 +6,7 @@ function onDeviceReady(){
     console.log(
       "name "+ user.displayName +"\n" + "email: " + user.email +"\n" + "photoURL: " + user.photoURL +"\n" + "emailVerified: " + user.emailVerified +"\n" + "ID: " + user.uid +"\n" + "Provider Data: " + user.providerData
     );
+    $('#settingsUsername').text(user.displayName);
   }else{
     console.log("Signed Out second");
   }
