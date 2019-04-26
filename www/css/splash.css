@@ -3,13 +3,6 @@
   position: relative !important;
 }
 
-[data-role=footer] {
-  bottom: 0;
-  position: absolute !important;
-  top: auto !important;
-  width: 100%;
-}
-
 [role=main] {
   height: 90%;
 }
