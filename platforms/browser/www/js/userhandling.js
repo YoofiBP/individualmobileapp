@@ -1,13 +1,10 @@
-  if(!isUserSignIn()){
-    window.location.href = "#login";
-  }
-
 function signIn(){
 var provider = new firebase.auth.GoogleAuthProvider();
 
 firebase.auth().signInWithPopup(provider).then(function(result){
   var token = result.credential.accessToken;
   var user = result.user;
+  window.location.href = '#settings';
 }).catch(function(error){
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -74,7 +71,7 @@ function validateLogin(){
     console.log(loginError);
     navigator.notification.alert(loginError, function(){}, "Invalid Login Details");
   }else{
-    firebase.auth().signInWithEmailAndPassword(email,password).catch(function(error){
+    firebase.auth().signInWithEmailAndPassword(email,password).then(function(){window.location.href = '#settings'}).catch(function(error){
       var errorCode = error.code;
       var errorMessage = error.message;
       // console.log(errorCode);

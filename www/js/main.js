@@ -14,6 +14,7 @@ function onDeviceReady(){
         });
     })
   }else{
+    window.location.href = '#login';
     console.log("Signed Out second");
   }
 });
