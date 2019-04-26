@@ -7,6 +7,11 @@
   height: 90%;
 }
 
+#imageAttachments{
+  height: 100px;
+  width: 100px;
+}
+
 .content {
   height: 100%;
 }

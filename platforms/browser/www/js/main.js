@@ -33,14 +33,16 @@ function showAlert(){
     "Title");
 }
 
-function takePicture(){navigator.camera.getPicture(onSuccess,onFail,{
+function takePicture(){
+  navigator.camera.getPicture(onSuccess,onFail,{
   quality: 50,
   destinationType: Camera.DestinationType.FILE_URI,
   sourceType: Camera.PictureSourceType.CAMERA,
   encodingType: Camera.EncodingType.JPEG
 });}
 
-function pickPicture(){navigator.camera.getPicture(onSuccess,onFail,{
+function pickPicture(){
+  navigator.camera.getPicture(onSuccess,onFail,{
   quality: 50,
   destinationType: Camera.DestinationType.FILE_URI,
   sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM,
@@ -48,8 +50,10 @@ function pickPicture(){navigator.camera.getPicture(onSuccess,onFail,{
 });}
 
 function onSuccess(imageURI){
-  var image = document.getELementbyId('imageAttachments');
+  /*var image = $('#imageAttachments');
   image.src = imageURI;
+  console.log(imageURI);*/
+  $('#imageAttachments').attr('src',imageURI);
   console.log(imageURI);
 }
 

@@ -19,7 +19,7 @@ $('#add_entry').click(function(){
     userdisplayName: user.displayName
   }).then(function(docRef){
     console.log(docRef.id);
-    window.location.href = "index.html/#journal";
+    window.location.href = "/#journal";
   }).catch(function(error){
     console.log(error);
   });
