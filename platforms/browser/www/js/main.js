@@ -9,6 +9,7 @@ function onDeviceReady(){
     $('#settingsUsername').text(user.displayName);
   }else{
     console.log("Signed Out second");
+
   }
 });
 
