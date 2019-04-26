@@ -103,6 +103,14 @@ function signUp(){
    }).then(pageThree).catch(function(error){});
  }
 
+ /*function setProfilePicture(){
+   var user = firebase.auth().currentUser;
+   var name = $('#imageAttachments').attr('src');
+   user.updateProfile({
+     photoURL : name
+   }).then(pageThree).catch(function(error){});
+ }*/
+
 $("#signUpButton").click(signUp);
 $('#usernameButton').click(setUsername);
 $("#loginButton").click(validateLogin);
