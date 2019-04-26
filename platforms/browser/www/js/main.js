@@ -9,7 +9,6 @@ function onDeviceReady(){
     $('#settingsUsername').text(user.displayName);
   }else{
     console.log("Signed Out second");
-
   }
 });
 
@@ -18,6 +17,8 @@ $('#usernameButton').hide();
 $('#profileComplete').hide();
 $('#cameraButton').hide();
 $('#galleryButton').hide();
+
+
 }
 
 function showAlert(){
