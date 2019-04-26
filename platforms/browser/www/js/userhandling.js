@@ -100,7 +100,7 @@ function signUp(){
    var name = $('#username').val();
    user.updateProfile({
      displayName : name
-   }).then(pageThree).catch(function(error){});
+   }).then(function(){$.mobile.changePage("#audios");}).catch(function(error){});
  }
 
  /*function setProfilePicture(){

@@ -51,7 +51,7 @@ var getFileBlob = function(url, cb) {
             console.log(error);
         }, function() {
             var downloadURL = uploadTask.snapshot.downloadURL;
-            console.log(downloadURL);
+            console.log("downloadURL" + downloadURL);
             // handle image here
         });
     });
