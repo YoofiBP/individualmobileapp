@@ -30,6 +30,9 @@
   text-align: center;
 }
 
+.postinfo {
+  text-align: left;
+}
 .ui-content {
   padding: 0px;
 }

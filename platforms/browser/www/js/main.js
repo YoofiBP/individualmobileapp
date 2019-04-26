@@ -7,6 +7,12 @@ function onDeviceReady(){
       "name "+ user.displayName +"\n" + "email: " + user.email +"\n" + "photoURL: " + user.photoURL +"\n" + "emailVerified: " + user.emailVerified +"\n" + "ID: " + user.uid +"\n" + "Provider Data: " + user.providerData
     );
     $('#settingsUsername').text(user.displayName);
+    db.collection("entries").where("userdisplayName", "==", user.displayName).get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            $(".entries").append('<h2>'+doc.data().title+'</h2>');
+            $(".entries").append(doc.data().content);
+        });
+    })
   }else{
     console.log("Signed Out second");
   }
@@ -17,8 +23,6 @@ $('#usernameButton').hide();
 $('#profileComplete').hide();
 $('#cameraButton').hide();
 $('#galleryButton').hide();
-
-
 }
 
 function showAlert(){
